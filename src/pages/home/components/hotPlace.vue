@@ -13,8 +13,8 @@
         <div class="wrapper">
         <swiper :options="swiperOption">
     <!-- slides -->
-    <swiper-slide class="hotSwiper" v-for="(item,index) in imgList" :key="index">
-        <img class="swiper-img" :src="item.imgSrc" alt="">
+    <swiper-slide class="hotSwiper" v-for="(item,index) in list" :key="index">
+        <img class="swiper-img" :src="item.imgUrl" alt="">
         <p>{{item.title}}</p>
     </swiper-slide>
     <!-- Optional controls -->
@@ -26,6 +26,7 @@
 <script>
 export default {
   name: "HomeHot",
+  props : ['list'],
   data() {
     return {
       swiperOption: {

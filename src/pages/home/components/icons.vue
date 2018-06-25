@@ -1,14 +1,17 @@
 <template>
     <div class="homeIcons">
-        <div class="icons" v-for="(item,index) in iconsList" :key="index">
-            <img :src="item.imgSrc" alt="">
-            <p>{{item.title}}</p>
+        <div class="icons" v-for="(item,index) in list" :key="index">
+            <img :src="item.imgUrl" alt="">
+            <p>{{item.desc}}</p>
         </div>
     </div>
 </template>
 <script>
 export default {
   name: "HomeIcons",
+  props:{
+    list:Array
+  },
   data() {
     return {
       iconsList: [

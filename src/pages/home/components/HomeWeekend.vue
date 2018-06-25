@@ -5,67 +5,24 @@
         </div>
         <div class="week-reco">
             <ul>
-                <li>
+                <li v-for="(item,index) in list" :key="index">
                     <div class="weekImg">
-                        <img src="http://img1.qunarzz.com/sight/source/1505/7d/df6ff468331c43.jpg_r_640x214_1f3783d0.jpg" alt="">
+                        <img :src="item.imgUrl" alt="">
                     </div>
                     <div class="weekContent">
-                        <p>上海必游TOP10</p>
-                        <p>中西完美合璧，展现现代上海风貌</p>
+                        <p>{{item.title}}</p>
+                        <p>{{item.desc}}</p>
                     </div>
                 </li>
-                <li>
-                    <div class="weekImg">
-                        <img src="http://img1.qunarzz.com/sight/source/1505/7d/df6ff468331c43.jpg_r_640x214_1f3783d0.jpg" alt="">
-                    </div>
-                    <div class="weekContent">
-                        <p>上海必游TOP10</p>
-                        <p>中西完美合璧，展现现代上海风貌</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="weekImg">
-                        <img src="http://img1.qunarzz.com/sight/source/1505/7d/df6ff468331c43.jpg_r_640x214_1f3783d0.jpg" alt="">
-                    </div>
-                    <div class="weekContent">
-                        <p>上海必游TOP10</p>
-                        <p>中西完美合璧，展现现代上海风貌</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="weekImg">
-                        <img src="http://img1.qunarzz.com/sight/source/1505/7d/df6ff468331c43.jpg_r_640x214_1f3783d0.jpg" alt="">
-                    </div>
-                    <div class="weekContent">
-                        <p>上海必游TOP10</p>
-                        <p>中西完美合璧，展现现代上海风貌</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="weekImg">
-                        <img src="http://img1.qunarzz.com/sight/source/1505/7d/df6ff468331c43.jpg_r_640x214_1f3783d0.jpg" alt="">
-                    </div>
-                    <div class="weekContent">
-                        <p>上海必游TOP10</p>
-                        <p>中西完美合璧，展现现代上海风貌</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="weekImg">
-                        <img src="http://img1.qunarzz.com/sight/source/1505/7d/df6ff468331c43.jpg_r_640x214_1f3783d0.jpg" alt="">
-                    </div>
-                    <div class="weekContent">
-                        <p>上海必游TOP10</p>
-                        <p>中西完美合璧，展现现代上海风貌</p>
-                    </div>
-                </li>
+
             </ul>
         </div>
     </div>
 </template>
 <script>
 export default {
-  name: "HomeWeekend"
+  name: "HomeWeekend",
+  props : ['list']
 };
 </script>
 <style lang="scss" scoped>

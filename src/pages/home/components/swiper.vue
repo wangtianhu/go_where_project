@@ -1,8 +1,8 @@
 <template>
    <div class="wrapper">
-        <swiper :options="swiperOption">
+        <swiper :options="swiperOption" v-if="showSwiper">
     <!-- slides -->
-    <swiper-slide v-for="(item,index) in swiperList" :key="index">
+    <swiper-slide v-for="(item,index) in list" :key="index">
         <img class="swiper-img" :src="item.imgUrl" alt="">
     </swiper-slide>
     <!-- Optional controls -->
@@ -14,7 +14,17 @@
  <script>
 export default {
   name: "HomeSwiper",
-  props:['swiperList'],
+  props:{
+    list:Array
+  },
+  computed : {
+    showSwiper(){
+     return this.list.length
+    }
+  },
+  watch:{
+   
+  },
   data() {
     return {
       swiperOption: {
@@ -31,6 +41,8 @@ export default {
   },
   mouted(){
       this.swiper.slideTo(4, 1000, false)
+      console.log(this.swiperList);
+      
   }
 };
 </script>

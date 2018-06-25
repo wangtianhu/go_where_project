@@ -1,13 +1,13 @@
 <template>
     <div class="hotlike">
         <ul>
-            <li>
+            <li v-for="item in list">
                 <div class="hotlike-left">
-                    <img src="http://img1.qunarzz.com/sight/p0/1506/30/7a528fae12c17e6e29d5d13a9d9813ee.water.jpg_200x200_e7f0d0ad.jpg" alt="">
+                    <img :src="item.imgUrl" alt="">
                 </div>
                 <div class="hotlick-right">
                     <div class="hotlike-title">
-                        上海玛雅海滩水公园
+                        {{item.title}}
                     </div>
                     <div class="hotPj">
                         5115条评论
@@ -22,117 +22,17 @@
                     </div>
                 </div>
             </li>
-            <li>
-                <div class="hotlike-left">
-                    <img src="http://img1.qunarzz.com/sight/p0/1506/30/7a528fae12c17e6e29d5d13a9d9813ee.water.jpg_200x200_e7f0d0ad.jpg" alt="">
-                </div>
-                <div class="hotlick-right">
-                    <div class="hotlike-title">
-                        上海玛雅海滩水公园
-                    </div>
-                    <div class="hotPj">
-                        5115条评论
-                    </div>
-                    <div class="hotsell">
-                        <div class="sellLeft">
-                            <span>￥</span><span>236</span>起
-                        </div>
-                        <div class="sellRight">
-                            浦东新区
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="hotlike-left">
-                    <img src="http://img1.qunarzz.com/sight/p0/1506/30/7a528fae12c17e6e29d5d13a9d9813ee.water.jpg_200x200_e7f0d0ad.jpg" alt="">
-                </div>
-                <div class="hotlick-right">
-                    <div class="hotlike-title">
-                        上海玛雅海滩水公园
-                    </div>
-                    <div class="hotPj">
-                        5115条评论
-                    </div>
-                    <div class="hotsell">
-                        <div class="sellLeft">
-                            <span>￥</span><span>236</span>起
-                        </div>
-                        <div class="sellRight">
-                            浦东新区
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="hotlike-left">
-                    <img src="http://img1.qunarzz.com/sight/p0/1506/30/7a528fae12c17e6e29d5d13a9d9813ee.water.jpg_200x200_e7f0d0ad.jpg" alt="">
-                </div>
-                <div class="hotlick-right">
-                    <div class="hotlike-title">
-                        上海玛雅海滩水公园
-                    </div>
-                    <div class="hotPj">
-                        5115条评论
-                    </div>
-                    <div class="hotsell">
-                        <div class="sellLeft">
-                            <span>￥</span><span>236</span>起
-                        </div>
-                        <div class="sellRight">
-                            浦东新区
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="hotlike-left">
-                    <img src="http://img1.qunarzz.com/sight/p0/1506/30/7a528fae12c17e6e29d5d13a9d9813ee.water.jpg_200x200_e7f0d0ad.jpg" alt="">
-                </div>
-                <div class="hotlick-right">
-                    <div class="hotlike-title">
-                        上海玛雅海滩水公园
-                    </div>
-                    <div class="hotPj">
-                        5115条评论
-                    </div>
-                    <div class="hotsell">
-                        <div class="sellLeft">
-                            <span>￥</span><span>236</span>起
-                        </div>
-                        <div class="sellRight">
-                            浦东新区
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="hotlike-left">
-                    <img src="http://img1.qunarzz.com/sight/p0/1506/30/7a528fae12c17e6e29d5d13a9d9813ee.water.jpg_200x200_e7f0d0ad.jpg" alt="">
-                </div>
-                <div class="hotlick-right">
-                    <div class="hotlike-title">
-                        上海玛雅海滩水公园
-                    </div>
-                    <div class="hotPj">
-                        5115条评论
-                    </div>
-                    <div class="hotsell">
-                        <div class="sellLeft">
-                            <span>￥</span><span>236</span>起
-                        </div>
-                        <div class="sellRight">
-                            浦东新区
-                        </div>
-                    </div>
-                </div>
-            </li>
+
+            
+          
+            
         </ul>
     </div>
 </template>
 <script>
 export default {
-  name: "HomeLike"
+  name: "HomeLike",
+  props:['list']
 };
 </script>
 <style lang="scss" scoped>
