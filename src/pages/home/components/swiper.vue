@@ -2,8 +2,8 @@
    <div class="wrapper">
         <swiper :options="swiperOption">
     <!-- slides -->
-    <swiper-slide v-for="(item,index) in srcImg" :key="index">
-        <img class="swiper-img" :src="item" alt="">
+    <swiper-slide v-for="(item,index) in swiperList" :key="index">
+        <img class="swiper-img" :src="item.imgUrl" alt="">
     </swiper-slide>
     <!-- Optional controls -->
     <div class="swiper-pagination"  slot="pagination"></div>
@@ -14,6 +14,7 @@
  <script>
 export default {
   name: "HomeSwiper",
+  props:['swiperList'],
   data() {
     return {
       swiperOption: {
